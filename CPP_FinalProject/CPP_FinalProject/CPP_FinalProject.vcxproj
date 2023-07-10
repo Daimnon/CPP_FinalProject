@@ -127,7 +127,15 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BloodPressureMonitor.cpp" />
     <ClCompile Include="CPP_FinalProject.cpp" />
+    <ClCompile Include="HeartMonitor.cpp" />
+    <ClCompile Include="UserData.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BloodPressureMonitor.h" />
+    <ClInclude Include="HeartMonitor.h" />
+    <ClInclude Include="UserData.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
