@@ -129,11 +129,13 @@
   <ItemGroup>
     <ClCompile Include="BloodPressureMonitor.cpp" />
     <ClCompile Include="CPP_FinalProject.cpp" />
+    <ClCompile Include="DataBase.cpp" />
     <ClCompile Include="HeartMonitor.cpp" />
     <ClCompile Include="UserData.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BloodPressureMonitor.h" />
+    <ClInclude Include="DataBase.h" />
     <ClInclude Include="HeartMonitor.h" />
     <ClInclude Include="UserData.h" />
   </ItemGroup>

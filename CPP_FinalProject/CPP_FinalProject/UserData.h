@@ -7,6 +7,7 @@
 
 class UserData {
 private:
+	int id;
 	std::string heartRate;
 	std::string bloodPressure;
 
@@ -14,6 +15,7 @@ public:
 	UserData();
 	~UserData();
 
+	int GetID();
 	void SetData();
 	std::string ToString();
 };
