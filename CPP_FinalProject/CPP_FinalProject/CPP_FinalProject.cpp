@@ -6,6 +6,6 @@
 int main()
 {
     UserData userData;
-    userData.SetData();
+    userData.SetData(); 
     std::cout << userData.ToString() << std::endl;
 }
