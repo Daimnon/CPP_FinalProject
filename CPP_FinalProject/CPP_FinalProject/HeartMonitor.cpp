@@ -1,8 +1,8 @@
 #include "HeartMonitor.h"
 
-HeartMonitor::HeartMonitor()
-{
-}
+HeartMonitor::HeartMonitor() : minValue(40), maxValue(220) {}
+
+HeartMonitor::HeartMonitor(int _minValue, int _maxValue) : minValue(_minValue), maxValue(_maxValue) {}
 
 HeartMonitor::~HeartMonitor()
 {
@@ -10,9 +10,16 @@ HeartMonitor::~HeartMonitor()
 
 std::string HeartMonitor::GetHeartRate()
 {
-	int randNumFirst = rand() % (maxValue - minValue + 1) + minValue;
+	// random formula between two values in order to get random heart rate
+	int randNumFirst = rand() % (maxValue - minValue + 1) + minValue; 
 	int randNumSecond = rand() % (maxValue - minValue + 1) + minValue;
 
-	std::string heartRateString = std::to_string(randNumFirst) +"-"+ std::to_string(randNumSecond);
+	// making sure lower value is on the left
+	std::string heartRateString;
+	if (randNumFirst < randNumSecond)
+		heartRateString = std::to_string(randNumFirst) +"-"+ std::to_string(randNumSecond);
+	else
+		heartRateString = std::to_string(randNumSecond) +"-"+ std::to_string(randNumFirst);
+
 	return heartRateString;
 }

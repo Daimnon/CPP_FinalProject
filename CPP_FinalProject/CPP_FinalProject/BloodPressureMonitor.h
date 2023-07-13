@@ -5,10 +5,11 @@
 
 class BloodPressureMonitor {
 private:
-	int minValue = 100;
-	int maxValue = 999;
+	int minValue;
+	int maxValue;
 public:
 	BloodPressureMonitor();
+	BloodPressureMonitor(int _minValue, int _maxValue);
 	~BloodPressureMonitor();
 
 	std::string GetBloodPressure();

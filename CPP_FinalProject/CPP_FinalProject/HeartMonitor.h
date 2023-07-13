@@ -5,10 +5,11 @@
 
 class HeartMonitor {
 private:
-	int minValue = 10;
-	int maxValue = 99;
+	int minValue;
+	int maxValue;
 public:
 	HeartMonitor();
+	HeartMonitor(int _minValue, int _maxValue);
 	~HeartMonitor();
 
 	std::string GetHeartRate();

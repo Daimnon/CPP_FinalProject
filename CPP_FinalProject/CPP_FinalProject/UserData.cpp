@@ -2,12 +2,11 @@
 
 UserData::UserData()
 {
-    id = rand() % (399999999 - 100000000 + 1) + 100000000;
-    HeartMonitor heartMonitor;
-    BloodPressureMonitor bloodPressureMonitor;
-    heartRate = heartMonitor.GetHeartRate();
-    bloodPressure = bloodPressureMonitor.GetBloodPressure();
+    // generate random id with random formula
+    id = rand() % (maxValue - minValue + 1) + minValue;
 }
+
+UserData::UserData(int _id) : id(_id) {}
 
 UserData::~UserData()
 {
@@ -18,13 +17,16 @@ int UserData::GetID()
     return id;
 }
 
-void UserData::SetData()
+void UserData::SetRandomMeasurements()
 {
-    id = rand() % (399999999 - 100000000 + 1) + 100000000;
-    HeartMonitor heartMonitor;
-    BloodPressureMonitor bloodPressureMonitor;
-    heartRate = heartMonitor.GetHeartRate();
-    bloodPressure = bloodPressureMonitor.GetBloodPressure();
+    MeasurmentDevice device;
+    heartRate = device.GetHeartRate(); // set random heart rate
+    bloodPressure = device.GetBloodPressure(); // set random blood pressure
+}
+void UserData::SetMeasurements(MeasurmentDevice device)
+{
+    heartRate = device.GetMeasurements()[0]; // get heart rate from device
+    bloodPressure = device.GetMeasurements()[1]; // get blood pressure from device
 }
 
 std::string UserData::ToString()

@@ -131,13 +131,17 @@
     <ClCompile Include="CPP_FinalProject.cpp" />
     <ClCompile Include="DataBase.cpp" />
     <ClCompile Include="HeartMonitor.cpp" />
+    <ClCompile Include="MeasurmentDevice.cpp" />
     <ClCompile Include="UserData.cpp" />
+    <ClCompile Include="UserInterface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="BloodPressureMonitor.h" />
     <ClInclude Include="DataBase.h" />
     <ClInclude Include="HeartMonitor.h" />
+    <ClInclude Include="MeasurmentDevice.h" />
     <ClInclude Include="UserData.h" />
+    <ClInclude Include="UserInterface.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

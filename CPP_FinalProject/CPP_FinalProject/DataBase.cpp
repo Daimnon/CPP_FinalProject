@@ -13,10 +13,6 @@ void DataBase::InitUserList(std::vector<UserData> newUserList)
 	userList = newUserList;
 }
 
-void DataBase::UpdateUser(UserData newUser)
-{
-}
-
 std::vector<UserData> DataBase::GetUsers()
 {
 	return userList;
